@@ -1,9 +1,10 @@
 def userRound(num):
+
     
     b = []
     c = []
 
-    decimal = float(num) - int(float(num))2
+    decimal = float(num) - int(float(num))
     if decimal == 0:
         str(decimal)
         for each in decimal:
@@ -34,5 +35,8 @@ def userRound(num):
 again = str("y")
 while again != "n":
     numEntered = input("Please enter a number: ")
-    userRound(numEntered)
-    again = input("\n\nDo you wou want to round another number? (y/n) ")
+    if type(numEntered) is int:
+        print("yikes")
+    else:
+        userRound(numEntered)
+        again = input("\n\nDo you wou want to round another number? (y/n) ")
